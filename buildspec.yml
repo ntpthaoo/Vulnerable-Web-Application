@@ -25,7 +25,7 @@ phases:
     commands:
       - echo "2. Build step"
       - echo "Run SonarCloud scanner"
-      - sonar-scanner -Dsonar.organization=ntpthaoo -Dsonar.projectKey=ntpthaoo_Vulnerable-Web-Application -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io
+      - sonar-scanner -Dsonar.organization=ntpthaoo -Dsonar.projectKey=ntpthaoo_Vulnerable-Web-Application -Dsonar.sources=. -Dsonar.pullrequest.key=${CODEBUILD_SOURCE_VERSION} -Dsonar.pullrequest.branch=${SONAR_PULLREQUEST_BRANCH}  -Dsonar.host.url=https://sonarcloud.io
       - sleep 5
       - echo "Get SonarClound scanning result and output it to build log."
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=ntpthaoo_Vulnerable-Web-Application >result.json
