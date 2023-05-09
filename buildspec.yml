@@ -23,7 +23,7 @@ phases:
       - export SONAR_SCANNER_OPTS="-server"
   build:
     commands:
-      - PR_NUMBER=$(aws codepipeline test-security --name my-pipeline --query 'stageStates[?stageName==`Source`].actionStates[?actionName==`SourceAction`].latestExecution.externalExecutionId' --output text | awk -F'/' '{print $4}')
+      - PR_NUMBER=$(aws codepipeline get-pipeline-state --name my-pipeline --query 'stageStates[?stageName==`Source`].actionStates[?actionName==`SourceAction`].latestExecution.externalExecutionId' --output text | awk -F'/' '{print $4}')
       - echo "2. Build step"
       - echo "Run SonarCloud scanner"
       - sonar-scanner -Dsonar.organization=ntpthaoo -Dsonar.projectKey=ntpthaoo_Vulnerable-Web-Application -Dsonar.sources=. Dsonar.pullrequest.key=$PR_NUMBER -Dsonar.host.url=https://sonarcloud.io
