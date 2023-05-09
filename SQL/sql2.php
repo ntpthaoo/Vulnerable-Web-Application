@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SQL Injection</title>
+	<title>SQL Injection Vunerablity</title>
 	<link rel="shortcut icon" href="../Resources/hmbct.png" />
 </head>
 <body>
