@@ -13,11 +13,34 @@
 
 	<div align="center">
 	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" >
-		<p>John -> Doe</p>
+		<p>John -> Doe//sssssss</p>
 		First name : <input type="text" name="firstname">
 		<input type="submit" name="submit" value="Submit">
 	</form>
 	</div>
+	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" >
+		<p>John -> Doe//sssssss</p>
+		First name : <input type="text" name="firstname">
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	</div>
+	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" >
+		<p>John -> Doe//sssssss</p>
+		First name : <input type="text" name="firstname">
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	</div>
+	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" >
+		<p>John -> Doe//sssssss</p>
+		First name : <input type="text" name="firstname">
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" >
+		<p>John -> Doe//sssssss</p>
+		First name : <input type="text" name="firstname">
+		<input type="submit" name="submit" value="Submit">
+	</form>
+
 
 
 <?php 
