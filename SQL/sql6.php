@@ -12,7 +12,7 @@
     <div align="center">
 	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="get" >
 		<p>Give me book's number and I give you...</p>
-		Book's number : <input type="text" name="number">
+		Book's numberrrrr : <input type="text" name="number">
 		<input type="submit" name="submit" value="Submit">
 	</form>
 	</div>
