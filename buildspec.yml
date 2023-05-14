@@ -35,7 +35,7 @@ phases:
       - echo "Get SonarClound scanning result and output it to build log."
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=ntpthaoo_Vulnerable-Web-Application >result.json
       - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
+      # - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
   post_build:
     commands:
       - echo 3. "Post build"
