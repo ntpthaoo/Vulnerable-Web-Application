@@ -1,15 +1,12 @@
 version: 0.0
 os: linux
-files:
-  - source: /home/ubuntu
-    destination: /home/ubuntu
-    overwrite: purge
 file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
+  ApplicationStart:
     - location: scripts/start_server.sh
       timeout: 300
       runas: root
