@@ -21,10 +21,10 @@ phases:
       - unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
       - export PATH=$SONAR_SCANNER_HOME/bin:$PATH
       - export SONAR_SCANNER_OPTS="-server"
-      - curl -L https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip -o build-wrapper-linux-x86.zip
-      - unzip build-wrapper-linux-x86.zip
-      - export PATH=$PATH:$PWD
-      - build-wrapper-linux-x86-64 --out-dir bw-output make
+      # - curl -L https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip -o build-wrapper-linux-x86.zip
+      # - unzip build-wrapper-linux-x86.zip
+      # - export PATH=$PATH:$PWD
+      # - build-wrapper-linux-x86-64 --out-dir bw-output make
   build:
     commands:
       - PR_NUMBER=$(aws codepipeline get-pipeline-state --name test-security --query 'stageStates[?stageName==`Source`].actionStates[?actionName==`SourceAction`].latestExecution.externalExecutionId' --output text | awk -F'/' '{print $4}')
