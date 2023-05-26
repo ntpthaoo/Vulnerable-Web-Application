@@ -1,5 +1,7 @@
 # Vulnerable Web Application 
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ntpthaoo_Vulnerable-Web-Application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ntpthaoo_Vulnerable-Web-Application)
+
 ![VulnWeb](https://github.com/OWASP/Vulnerable-Web-Application/blob/master/Resources/VulnWeb.png)
 
 ## What is Vulnerable-Web-Application
