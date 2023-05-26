@@ -1,7 +1,7 @@
 <?php
 
 
-*/
+
 
 include("security.php");
 include("security_level_check.php");
