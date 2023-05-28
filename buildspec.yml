@@ -30,8 +30,8 @@ phases:
       - export SONAR_SCANNER_OPTS="-server"
       # Enable Xdebug for code coverage
       - php -i | grep "Loaded Configuration File"
-      - echo "zend_extension=xdebug.so" >> /etc/php/8.2/cli/php.ini
-      - echo "xdebug.mode=coverage" >> /etc/php/8.2/cli/php.ini
+      - echo "zend_extension=xdebug.so" >> /root/.phpenv/versions/8.2.5/etc/php.ini
+      - echo "xdebug.mode=coverage" >> /root/.phpenv/versions/8.2.5/etc/php.ini
   build:
     commands:
       - php vendor/bin/phpunit --coverage-clover coverage.xml
