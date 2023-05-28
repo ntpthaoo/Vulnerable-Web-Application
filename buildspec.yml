@@ -9,9 +9,14 @@ env:
     Organization: demo-datn-codebuild:Organization
     Project: demo-datn-codebuild:Project
 phases:
-  pre_build:
+  install:
     runtime-versions:
-      php: 7.4.29
+      php: 7.4
+    commands:
+      # Install dependencies and PHPUnit
+      - composer install
+      - composer require --dev phpunit/phpunit
+  pre_build:
     commands:
       - echo "1. pre build step"
       - apt-get update
@@ -23,8 +28,7 @@ phases:
       - unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
       - export PATH=$SONAR_SCANNER_HOME/bin:$PATH
       - export SONAR_SCANNER_OPTS="-server"
-      - composer install
-      - composer require --dev phpunit/phpunit
+      # Enable Xdebug for code coverage
       - echo "zend_extension=xdebug.so" >> /etc/php/7.4/cli/php.ini
       - echo "xdebug.mode=coverage" >> /etc/php/7.4/cli/php.ini
   build:
