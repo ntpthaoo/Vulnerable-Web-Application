@@ -15,7 +15,10 @@ phases:
     commands:
       # Install dependencies and PHPUnit
       - composer install
+      - rm composer.lock
+      - composer update
       - composer require --dev phpunit/phpunit
+      - composer show phpunit/phpunit
   pre_build:
     commands:
       - echo "1. pre build step"
