@@ -37,7 +37,7 @@ phases:
       # - echo "xdebug.mode=coverage" >> /root/.phpenv/versions/8.2.5/etc/php.ini
   build:
     commands:
-      - phpunit --coverage-clover coverage.xml --debug
+      - php vendor/bin/phpunit --coverage-clover=coverage.xml
       - echo "2. Build step"
       - echo "Run SonarCloud scanner"
       - sonar-scanner -Dsonar.organization=ntpthaoo -Dsonar.projectKey=ntpthaoo_Vulnerable-Web-Application -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.php.coverage.reportPaths=coverage.xml

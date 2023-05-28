@@ -21,8 +21,6 @@ use PHPUnit\Framework\MockObject\Invocation as BaseInvocation;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
- *
- * @deprecated
  */
 final class ConsecutiveParameters implements ParametersRule
 {
@@ -103,6 +101,12 @@ final class ConsecutiveParameters implements ParametersRule
         if (!isset($this->parameterGroups[$callIndex])) {
             // no parameter assertion for this call index
             return;
+        }
+
+        if ($invocation === null) {
+            throw new ExpectationFailedException(
+                'Mocked method does not exist.'
+            );
         }
 
         $parameters = $this->parameterGroups[$callIndex];
