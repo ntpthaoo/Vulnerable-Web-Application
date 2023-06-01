@@ -9,16 +9,6 @@ env:
     Organization: demo-datn-codebuild:Organization
     Project: demo-datn-codebuild:Project
 phases:
-  install:
-    runtime-versions:
-      php: 8.2
-    commands:
-      # Install dependencies and PHPUnit
-      - composer install
-      - rm composer.lock
-      - composer update
-      - composer require --dev phpunit/phpunit
-      - composer show phpunit/phpunit
   pre_build:
     commands:
       - echo "1. pre build step"
@@ -31,10 +21,7 @@ phases:
       - unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
       - export PATH=$SONAR_SCANNER_HOME/bin:$PATH
       - export SONAR_SCANNER_OPTS="-server"
-      # Enable Xdebug for code coverage
-      - php -i | grep "Loaded Configuration File"
-      # - echo "zend_extension=xdebug.so" >> /root/.phpenv/versions/8.2.5/etc/php.ini
-      # - echo "xdebug.mode=coverage" >> /root/.phpenv/versions/8.2.5/etc/php.ini
+ 
   build:
     commands:
       - php vendor/bin/phpunit --coverage-clover=coverage.xml
@@ -56,4 +43,4 @@ artifacts:
     - appspec.yml
     - docker-compose.yml
     - .env
-    - coverage.xml
+ 
