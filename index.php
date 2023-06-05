@@ -26,7 +26,7 @@
 
 if (isset($_POST["submit"])) {
 
-   $dbhost = 'localhost';
+   $dbhost = 'localhost:3307';
    $dbuser = 'root';
    $dbpass = '';
    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
    mysqli_close($conn);
 }
 if (isset($_POST["submit1"])) {
-   $dbhost = 'localhost';
+   $dbhost = 'localhost:3307';
    $dbuser = 'root';
    $dbpass = '';
    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
