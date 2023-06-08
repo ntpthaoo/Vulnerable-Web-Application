@@ -11,7 +11,7 @@ env:
 phases:
   install:
     runtime-versions:
-      php: 7.4
+      php: 7.3
     commands:
       - echo "Installing XAMPP..."
       - wget https://www.apachefriends.org/xampp-files/7.4.29.tar.gz
