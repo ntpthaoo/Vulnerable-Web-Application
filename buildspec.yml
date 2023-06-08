@@ -14,9 +14,9 @@ phases:
       php: 8.2
     commands:
       - echo "Installing XAMPP..."
-      - wget https://www.apachefriends.org/xampp-files/7.4.29.tar.gz
-      - tar xzf 7.4.29.tar.gz
-      - ./7.4.29/xampp start
+      - wget chmod +x xampp-linux-x64-8.2.4-0-installer.run
+      - chmod +x xampp-linux-x64-8.2.4-0-installer.run
+      - ./xampp-linux-x64-8.2.4-0-installer.run
   pre_build:
     commands:
       - echo "Installing PHP dependencies..."
