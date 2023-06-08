@@ -13,10 +13,9 @@ phases:
     runtime-versions:
       php: 8.2
     commands:
-      - echo "Installing XAMPP..."
-      - wget chmod +x xampp-linux-x64-8.2.4-0-installer.run
-      - chmod +x xampp-linux-x64-8.2.4-0-installer.run
-      - ./xampp-linux-x64-8.2.4-0-installer.run
+      - apt-cache search apache
+      - sudo apt-get install apache2 -y
+      - sudo systemctl start apache2 
   pre_build:
     commands:
       - echo "Installing PHP dependencies..."
