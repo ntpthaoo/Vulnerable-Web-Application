@@ -20,8 +20,6 @@ phases:
       - sudo service apache2 status 
   pre_build:
     commands:
-      - echo "Installing PHP dependencies..."
-      - composer install --no-interaction --prefer-dist
       - echo "1. pre build step"
       - apt-get update
       - apt-get install -y jq
