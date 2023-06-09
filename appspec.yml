@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /homepage.html
+  - source: /
     destination: /var/www/html
     overwrite: true
 file_exists_behavior: OVERWRITE
