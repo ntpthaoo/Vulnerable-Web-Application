@@ -16,7 +16,8 @@ phases:
       - apt-cache search apache
       - sudo apt-get update
       - sudo apt-get install apache2 -y
-      - sudo systemctl start apache2 
+      - sudo service apache2 start 
+      - sudo systemctl status apache2
   pre_build:
     commands:
       - echo "Installing PHP dependencies..."
