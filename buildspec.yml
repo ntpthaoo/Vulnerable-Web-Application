@@ -19,7 +19,7 @@ phases:
       - sudo service apache2 start 
       - sudo service apache2 status 
       - docker pull mysql:latest
-      - sudo apt install php-mysqli
+      - sudo apt install php-mysqli -y
   pre_build:
     commands:
       - echo "1. pre build step"
