@@ -18,10 +18,11 @@ phases:
       - sudo apt-get install apache2 -y
       - sudo service apache2 start 
       - sudo service apache2 status 
+      - docker pull mysql:latest
   pre_build:
     commands:
       - echo "1. pre build step"
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 103448072587.dkr.ecr.us-east-1.amazonaws.com
+      - docker run -d -p 3307:3307 --name mysql-container -e MYSQL_ROOT_PASSWORD=<root_password> mysql:latest
       - apt-get update
       - apt-get install -y jq
       - echo "Install Sonar scanner binary."
@@ -34,7 +35,6 @@ phases:
   build:
     commands:
       - echo "2. Build step"
-      - docker build -f Dockerfile -t mysql .
       - echo "Run SonarCloud scanner"
       - sonar-scanner -Dsonar.organization=ntpthaoo -Dsonar.projectKey=ntpthaoo_Vulnerable-Web-Application -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.php.coverage.reportPaths=coverage.xml
       - sleep 5
@@ -45,9 +45,6 @@ phases:
   post_build:
     commands:
       - echo 3. "Post build"
-      - echo "3.1 Push img to ECR ---------"
-      - docker tag mysql:latest 103448072587.dkr.ecr.us-east-1.amazonaws.com/mysql:latest
-      - docker push 103448072587.dkr.ecr.us-east-1.amazonaws.com/mysql:latest
 artifacts:
   files:
     - '***/**'
