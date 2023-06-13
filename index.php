@@ -245,8 +245,7 @@ function remove_database($conn){
 
 ?>
 </div>
-  <img src="Resources/hmb.png" align="left" style="width:40%" alt="HummingbirdsCyberTeam">
-  <img src="Resources/gazicyber.jpg" align="right" style="width:15%" alt="GaziCyber">
+
 
 </body>
 </html>
