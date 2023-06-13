@@ -22,7 +22,7 @@ phases:
   pre_build:
     commands:
       - echo "1. pre build step"
-      - docker run -d -p 3307:3307 --name mysql-container -e MYSQL_ROOT_PASSWORD=<root_password> mysql:latest
+      - docker run -d -p 3307:3307 --name mysql-container mysql:latest
       - apt-get update
       - apt-get install -y jq
       - echo "Install Sonar scanner binary."
