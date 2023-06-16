@@ -4,4 +4,5 @@
 apt-cache search apache
 sudo apt-get install apache2 -y
 sudo apt install php-mysqli -y
+docker pull mysql:latest
 
