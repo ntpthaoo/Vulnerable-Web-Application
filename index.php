@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
    if(! $conn ) {
       die('Could not connect: ' . mysqli_error( $conn));
    }
-   else
+   else{
    echo 'Connected successfully  </br>';
    create_database($conn);
    create_tables($conn, "1ccb8097d0e9ce9f154608be60224c7c");
@@ -241,6 +241,7 @@ function remove_database($conn){
    else{
    echo "Error: ".$sql."<br>". mysqli_error($conn);
    }
+}
 }
 
 ?>

@@ -32,8 +32,6 @@ phases:
       - docker run -d -p 3307:3307 --name mysql-container mysql:latest
       - apt-get update
       - apt-get install -y jq
-      - mysql -u root -p
-      - SELECT @@hostname;
       - echo "Install Sonar scanner binary."
       - export SONAR_SCANNER_VERSION=4.7.0.2747
       - export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux
