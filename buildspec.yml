@@ -18,6 +18,7 @@ phases:
       - sudo apt-get install apache2 -y
       - sudo service apache2 start 
       - sudo service apache2 status 
+      - sudo apt-get install mysql-client
       - docker login --username ntpthao --password phuongthao19
       - docker pull mysql:latest
       - sudo apt install php-mysqli -y
