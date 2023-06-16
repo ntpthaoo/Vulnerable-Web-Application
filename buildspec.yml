@@ -18,6 +18,7 @@ phases:
       - sudo apt-get install apache2 -y
       - sudo service apache2 start 
       - sudo service apache2 status 
+      - docker login
       - docker pull mysql:latest
       - sudo apt install php-mysqli -y
   pre_build:
