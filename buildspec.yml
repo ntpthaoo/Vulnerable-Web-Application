@@ -27,8 +27,7 @@ phases:
       - hostname -I
   pre_build:
     commands:
-      - mysql -u root -p
-      - SELECT @@hostname;
+      - mysql -u root -p -e "SELECT @@hostname;"
       - echo "1. pre build step"
       - docker run -d -p 3307:3307 --name mysql-container mysql:latest
       - apt-get update
