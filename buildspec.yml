@@ -20,14 +20,9 @@ phases:
       - sudo service apache2 status 
       - docker login --username ntpthao --password phuongthao19
       - docker pull mysql:latest
-      - apt-get install -y mysql-server
-      - apt-get install -y mysql-client
-      - sudo service mysql start
       - sudo apt install php-mysqli -y
-      - hostname -I
   pre_build:
     commands:
-      - mysql -h localhost -P 3307 -u root 
       - echo "1. pre build step" 
       - docker run -d -p 3307:3307 --name mysql-container mysql:latest
       - apt-get update
