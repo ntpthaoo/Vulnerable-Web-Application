@@ -21,6 +21,7 @@ phases:
       - docker login --username ntpthao --password phuongthao19
       - docker pull mysql:latest
       - apt-get install -y mysql-client
+      - sudo service mysql start
       - sudo apt install php-mysqli -y
   pre_build:
     commands:
