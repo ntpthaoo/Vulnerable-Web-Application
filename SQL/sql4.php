@@ -43,8 +43,8 @@
 		//I'm the best web developer.
 		//number is too dangerous. I have to do something.
 		if(strchr($number,"'")){
-			echo "What are you trying to do?<br />";
-			echo "Awesome hacking skillzz<br />";
+			echo "What are you trying to do? ";
+			echo "Awesome hacking skillzz ";
 			echo "But you can't hack me anymore!";
 			exit;
 		}
