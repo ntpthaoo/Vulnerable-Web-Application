@@ -26,7 +26,7 @@
 
 if (isset($_POST["submit"])) {
 
-   $dbhost = 'localhost:3307';
+   $dbhost = '1';
    $dbuser = 'root';
    $dbpass = '';
    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
