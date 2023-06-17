@@ -49,6 +49,6 @@ phases:
       - echo 3. "Post build"
 artifacts:
   files:
-    - '***/**'
+    - '**/*'
     
  
