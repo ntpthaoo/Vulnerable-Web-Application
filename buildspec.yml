@@ -12,19 +12,9 @@ phases:
   install:
     runtime-versions:
       php: 8.2
-    commands:
-      - apt-cache search apache
-      - sudo apt-get update
-      - sudo apt-get install apache2 -y
-      - sudo service apache2 start 
-      - sudo service apache2 status 
-      - docker login --username ntpthao --password phuongthao19
-      - docker pull mysql:latest
-      - sudo apt install php-mysqli -y
   pre_build:
     commands:
       - echo "1. pre build step" 
-      - docker run -d --name mysql-container -p 3307:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql:latest
       - apt-get update
       - apt-get install -y jq
       - echo "Install Sonar scanner binary."
