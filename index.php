@@ -7,7 +7,7 @@
 <body>
   <link rel="stylesheet" href="Resources/button.css">
   <div class="button" align="center" style="background-color:#757575;padding:10px;border-radius:80px 80px 0px 0px">
-    <button type="button" name="homepagebutton" onclick="location.href='homepage.html'">Homeeeee Page</button>
+    <button type="button" name="homepagebutton" onclick="location.href='homepage.html'">Home Page</button>
   </div>
   </link>
   <div align="center" style="background-color:#c9c9c9;padding:150px;">
@@ -126,109 +126,109 @@ function create_tables($conn, $db_name){
 
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (1, "SILMARILLION", "J.R.R TOLKIEN")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully ";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (2, "DUNE", "FRANK HERBERT")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully ";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (3, "THE HUNGER GAMES", "SUZANNE COLLINS")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully ";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (4, "HARRY POTTER \AND THE ORDER OF THE PHONEIX", "J.K ROWLING")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully ";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (5, "TO KILL A MOCKINGBIRD", "HARPER LEE")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully ";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (6, "TWILIGHT", "STEPHEINE MEYER")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully ";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (7, "THE MICE MAN", "GEORGE COCKCROFT")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
    #--------------------------------------------------------------------------------------------
 
    $sql = 'INSERT INTO flags (flag) VALUES ("You hacked me!")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO flags (flag) VALUES ("SQL Injection is easy?")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
 
    #----------------------------------------------------------------------------------------------
 
    $sql = 'INSERT INTO secret (username, password) VALUES ("admin", "password")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
 
    #--------------------------------------------------------------------------------------------------
 
    $sql = 'INSERT INTO users (firstname, lastname, username, password) VALUES ("John","Doe", "Admin", "password")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO users (firstname, lastname, username, password) VALUES ("Alice","Carrol", "Rabbit", "White")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO users (firstname, lastname, username, password) VALUES ("Bruce","Batman", "Alfred", "Batmobile")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
    $sql = 'INSERT INTO users (firstname, lastname, username, password) VALUES ("Dare","Devil", "HackMe", "IfY0UC4N")';
    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully </br>";
+      echo "New record created successfully <br/>";
    }
    else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error: " . $sql . "<br/>" . mysqli_error($conn);
    }
 }
 
@@ -236,10 +236,10 @@ function remove_database($conn){
    $sql = 'DROP DATABASE 1ccb8097d0e9ce9f154608be60224c7c';
    $retval = mysqli_query($conn, $sql);
    if($retval){
-      echo "<br>The database deleted successfully.<br>";
+      echo "<br>The database deleted successfully.<br/>";
    }
    else{
-      echo "Error: ".$sql."<br>". mysqli_error($conn);
+      echo "Error: ".$sql."<br/>". mysqli_error($conn);
    }
 }
 
