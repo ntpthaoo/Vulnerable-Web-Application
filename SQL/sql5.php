@@ -41,8 +41,8 @@
 		//You hacked me again?
 		//I updated my code
 		if(strchr($number,"'")){
-			echo "What are you trying to do?<br>";
-			echo "Awesome hacking skillzz<br>";
+			echo "What are you trying to do?<br />";
+			echo "Awesome hacking skillzz<br />";
 			echo "But you can't hack me anymore!";
 			exit;
 		}

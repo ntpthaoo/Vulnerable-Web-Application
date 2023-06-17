@@ -11,7 +11,7 @@
 </div>
 <div align="center">
 <form action="" method="post" enctype="multipart/form-data">
-    <br>
+<br />
     <b>Select image : </b> 
     <input type="file" name="file" id="file" style="border: solid;">
     <input type="submit" value="Submit" name="submit">

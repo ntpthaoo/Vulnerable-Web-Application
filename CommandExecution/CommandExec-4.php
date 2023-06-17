@@ -12,7 +12,7 @@
       <h1 align="center">Browse The Files!</h1>
     <form align="center" action="CommandExec-4.php" method="$_GET">
       What's it:
-      <input type="text" name="typeBox" value=""><br>
+      <input type="text" name="typeBox" value=""><br />
       <input type="submit" value="Submit">
     </form>
   </div>

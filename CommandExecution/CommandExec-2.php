@@ -12,7 +12,7 @@
       <h1 align="center">I think there is a vuln here!</h1>
     <form align="center" action="CommandExec-2.php" method="$_GET">
       <label align="center">Name:</label>
-      <input align="center" type="text" name="typeBox" value=""><br>
+      <input align="center" type="text" name="typeBox" value=""><br />
       <input align="center" type="submit" value="Submit">
     </form>
   </div>

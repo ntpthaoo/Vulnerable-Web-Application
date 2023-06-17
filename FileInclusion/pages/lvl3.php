@@ -19,7 +19,7 @@
       </div>
       
       <?php
-        echo "</br></br>";
+        echo "<br /><br />";
         
         if (isset( $_GET[ 'file' ]))        
         {

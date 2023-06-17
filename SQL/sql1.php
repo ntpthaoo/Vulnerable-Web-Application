@@ -67,7 +67,7 @@
         // output data of each row
     		while($row = mysqli_fetch_assoc($result)) {
        			echo $row["lastname"];
-       			echo "<br>";
+       			echo "<br />";
     		}
 		} else {
     		echo "0 results";
