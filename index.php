@@ -26,7 +26,7 @@
 
 if (isset($_POST["submit"])) {
 
-   $dbhost = '1';
+   $dbhost = 'localhost';
    $dbuser = 'root';
    $dbpass = '';
    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
@@ -34,8 +34,8 @@ if (isset($_POST["submit"])) {
    if(! $conn ) {
       die('Could not connect: ' . mysqli_error( $conn));
    }
-   else{
-      echo 'Connected successfully  </br>';
+   else {
+      echo 'Connected successfully';
       create_database($conn);
       create_tables($conn, "1ccb8097d0e9ce9f154608be60224c7c");
       mysqli_close($conn);
@@ -48,7 +48,7 @@ if (isset($_POST["submit1"])) {
    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
    if ($conn) {
-   	echo "Connected successfully <br>";
+   	echo "Connected successfully";
    }
    else {
 	   die('Could not connect: ' . mysqli_error( $conn));
@@ -69,7 +69,7 @@ function create_database($conn){
       die('Could not create database: ' . mysqli_error( $conn));
    }
 
-   echo "Database 1ccb8097d0e9ce9f154608be60224c7c created successfully </br>";
+   echo "Database 1ccb8097d0e9ce9f154608be60224c7c created successfully";
 }
 
 function create_tables($conn, $db_name){
@@ -84,7 +84,7 @@ function create_tables($conn, $db_name){
       die('Could not create table: ' . mysqli_error( $conn));
    }
     #-------------------------------------------------
-   echo "Table books created successfully </br>";
+   echo "Table books created successfully";
 
    $sql = 'CREATE TABLE flags( '.
       'flag VARCHAR(50) NOT NULL)';
@@ -95,7 +95,7 @@ function create_tables($conn, $db_name){
       die('Could not create table: ' . mysqli_error( $conn));
    }
 
-   echo "Table flags created successfully </br>";
+   echo "Table flags created successfully ";
    #---------------------------------------------------
    $sql = 'CREATE TABLE secret( '.
       'username VARCHAR(56) NOT NULL , '.
@@ -107,7 +107,7 @@ function create_tables($conn, $db_name){
       die('Could not create table: ' . mysqli_error( $conn));
    }
 
-   echo "Table secret created successfully </br>";
+   echo "Table secret created successfully ";
    #---------------------------------------------------
    $sql = 'CREATE TABLE users( '.
       'firstname VARCHAR(50) NOT NULL , '.
@@ -121,7 +121,7 @@ function create_tables($conn, $db_name){
       die('Could not create table: ' . mysqli_error( $conn));
    }
 
-   echo "Table users created successfully </br>";
+   echo "Table users created successfully ";
    #---------------------------------------------------
 
    $sql = 'INSERT INTO books (number, bookname, authorname) VALUES (1, "SILMARILLION", "J.R.R TOLKIEN")';
