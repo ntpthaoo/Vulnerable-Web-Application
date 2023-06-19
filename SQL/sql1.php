@@ -60,7 +60,9 @@
 	
 	if(isset($_POST["submit"])){
 		$firstname = $_POST["firstname"];
-		$sql = "SELECT lastname FROM users WHERE firstname='$firstname'";//String
+		$firstname1= mysqli_real_escape_string($conn, $firstname); 
+		
+		$sql = "SELECT lastname FROM users WHERE firstname='$firstname1'";//String
 		$result = mysqli_query($conn,$sql);
 		
 		if (mysqli_num_rows($result) > 0) {
