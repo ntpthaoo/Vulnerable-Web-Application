@@ -60,6 +60,7 @@
 	
 	if(isset($_POST["submit"])){
 		$firstname = $_POST["firstname"];
+		// mysql_real_escape_string() để loại bỏ những kí tự có thể gây ảnh hưởng đến câu lệnh SQL.
 		$firstname1= mysqli_real_escape_string($conn, $firstname); 
 		
 		$sql = "SELECT lastname FROM users WHERE firstname='$firstname1'";//String
