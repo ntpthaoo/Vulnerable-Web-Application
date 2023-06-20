@@ -70,7 +70,8 @@ if(isset($_REQUEST["action"]) && isset($_REQUEST["password_new"]) && isset($_REQ
                               
                     $password_curr = $_REQUEST["password_curr"];
                     $password_curr = mysqli_real_escape_string($link, $password_curr);
-                    $password_curr = hash("sha1", $password_curr, false);                
+                    // $password_curr = hash("sha1", $password_curr, false);    
+                    $password_curr = hash( $password_curr, false);        
 
                     $sql = "SELECT password FROM users WHERE login = '" . $login . "' AND password = '" . $password_curr . "'";
 
