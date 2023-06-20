@@ -18,15 +18,16 @@
 		<input type="submit" name="submit" value="Submit">
 	</form>
 	</div>
-
+	
 <?php
-	$servername = "localhost:3307";
-	$username = "root";
-	$password = "";
-	$db = "1ccb8097d0e9ce9f154608be60224c7c";
+	require_once 'config.php';
+	// $servername = "localhost:3307";
+	// $username = "root";
+	// $password = "";
+	// $db = "1ccb8097d0e9ce9f154608be60224c7c";
 
 	// Create connection
-	$conn = new mysqli($servername, $username, $password,$db);
+	$conn = new mysqli($dbConfig['host'], $dbConfig['username'], $dbConfig['password'], $dbConfig['database']);
 
 	// Check connection
 	if ($conn->connect_error) {
