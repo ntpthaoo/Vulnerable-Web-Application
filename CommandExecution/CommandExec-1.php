@@ -23,7 +23,7 @@
     <?php
     if(isset($_GET["username"])){
         // echo shell_exec($_GET["username"]);
-         // Sanitize the username input
+         // Sanitize the username input.  Hàm này thực hiện việc escape (bỏ ký tự đặc biệt) các ký tự trong đối số để đảm bảo rằng nó được xử lý đúng trong một lệnh shell và ngăn ngừa các lỗ hổng bảo mật như command injection.
         $sanitizedUsername = escapeshellarg($username);
         // Execute the command with the sanitized username
         echo shell_exec("echo " . $sanitizedUsername);
