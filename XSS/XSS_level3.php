@@ -18,8 +18,9 @@
 	</div>
 <?php 
 if (isset($_GET["username"])) {
-	$user = preg_replace("/<(.*)[S,s](.*)[C,c](.*)[R,r](.*)[I,i](.*)[P,p](.*)[T,t]>/i", "", $_GET["username"]);
-	echo "Your name is "."$user";
+	// $user = preg_replace("/<(.*)[S,s](.*)[C,c](.*)[R,r](.*)[I,i](.*)[P,p](.*)[T,t]>/i", "", $_GET["username"]);
+	// echo "Your name is "."$user";
+   echo("Your name is ".$_GET["username"]);
 }
  ?>
 
