@@ -19,9 +19,9 @@
 <?php
    if(isset($_GET["username"]))
    // thuc hien day mot ma nguon co loi xss len tren quy trinh CICD
-       echo("Your name is ".$_GET["username"]); 
-   // Sua lo hong XSS trong ma nguon
-      // echo("Your name is " . htmlspecialchars($_GET["username"]) )
+      //  echo("Your name is ".$_GET["username"]); 
+   // Sua loi lo hong XSS trong ma nguon
+      echo("Your name is " . htmlspecialchars($_GET["username"]) )
    ?> 
 </body>
 </html>
