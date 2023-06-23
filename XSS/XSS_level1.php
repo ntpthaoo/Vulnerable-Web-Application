@@ -19,6 +19,7 @@
 <?php
 if(isset($_GET["username"]))
  echo("Your name is ".$_GET["username"])
+ 
   // echo("Your name is " . htmlspecialchars($_GET["username"]) )
    ?> 
 </body>
