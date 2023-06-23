@@ -7,7 +7,7 @@
 <body>
 	
 	 <div style="background-color:#c9c9c9;padding:15px;">
-      <button type="button" name="homeButton" onclick="location.href='../homepage.html';">Homeeee Page</button>
+      <button type="button" name="homeButton" onclick="location.href='../homepage.html';">Home Page</button>
       <button type="button" name="mainButton" onclick="location.href='xssmainpage.html';">Main Page</button>
     </div>
 <div align="center">
@@ -18,6 +18,7 @@
 	</div>
 <?php
    if(isset($_GET["username"]))
+   // thuc hien day mot ma nguon co long xss len tren quy trinh CICD
        echo("Your name is ".$_GET["username"])
 
   // echo("Your name is " . htmlspecialchars($_GET["username"]) )
