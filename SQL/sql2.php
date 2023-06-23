@@ -39,7 +39,8 @@
 		$query = "SELECT bookname, authorname FROM books WHERE number = ?";
 		// myqli_prepare: hàm sử dụng để tạo một đối tượng cho câu lệnh
 		$stmt = mysqli_prepare($conn, $query);
-		//mysqli_stmt_bind_param() dùng để liên kết các tham số đầu vào với câu lệnh SQL đã được biên dịch.  tham số "i" xác định rằng đầu vào là một số nguyên.
+		//mysqli_stmt_bind_param() dùng để liên kết các tham số đầu vào với câu lệnh SQL đã được biên dịch. 
+		// tham số "i" xác định rằng đầu vào là một số nguyên.
 		mysqli_stmt_bind_param($stmt, "i", $number);
 
 		// Execute the prepared statement
